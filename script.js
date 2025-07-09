@@ -6,13 +6,13 @@ function telaInicial() {
   app.innerHTML = `
     <h2>🍣 Deseja receber sushi de graça por Sedex?</h2>
     <div style="text-align:center;">
-      <button id="cancelar">Não quero</button>
+      <button id="cancelar">Cancelar</button>
       <button id="receber">Receber</button>
     </div>
   `;
   document.getElementById('cancelar').onclick = () => {
     app.innerHTML = `
-      <h2>Que pena! Fique sem então. 😽</h2>
+      <h2>Cancelado. Até mais! 😽</h2>
       <div style="text-align: center; margin-top: 20px;">
         <button id="voltar">Voltar</button>
       </div>
