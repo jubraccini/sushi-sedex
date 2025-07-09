@@ -1,0 +1,156 @@
+/* === Layout geral === */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: url('https://64.media.tumblr.com/42c01bbb1e77df71b8d99484cce3b5ee/774d51fab4276760-04/s1280x1920/927f312d9e16a4b1b0672fb4f2e38af703f1d320.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'MS Sans Serif', Tahoma, sans-serif;
+  color: #000080;
+}
+#app {
+  max-width: 360px;
+  margin: 0;
+  border: 2px solid #000080;
+  background: #f9f6ef;
+  box-shadow:
+    2px 2px 5px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 0 white,
+    inset -2px -2px 0 #404040;
+  padding: 20px;
+  border-radius: 6px;
+}
+h2 {
+  margin-top: 0;
+  font-weight: normal;
+  font-size: 1.2rem;
+  text-align: center;
+}
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  background: #d4d0c8;
+  border: 2px solid #808080;
+  padding: 8px 16px;
+  margin: 10px 5px 0 0;
+  box-shadow: 2px 2px 0 white, -2px -2px 0 #404040;
+  cursor: pointer;
+  user-select: none;
+  color: black;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.1s;
+}
+button:hover {
+  background-color: #a0a0a0;
+  border-color: #000080;
+  color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 128, 0.6);
+}
+button:active {
+  box-shadow: inset 2px 2px 0 white, inset -2px -2px 0 #404040;
+}
+
+/* === Spinner do envio === */
+.spinner {
+  margin: 20px auto 0;
+  border: 4px solid #c0c0c0;
+  border-top: 4px solid #000080;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {transform: rotate(360deg);}
+}
+
+/* === Estilo da janela de erro retrô === */
+.win98-error {
+  width: 300px;
+  background: #ece9d8;
+  border: 2px solid #000080;
+  font-family: 'MS Sans Serif', Tahoma, sans-serif;
+  font-size: 13px;
+  color: black;
+  margin: 60px auto;
+  box-shadow:
+    2px 2px 5px rgba(0, 0, 0, 0.25),
+    2px 2px 0 #808080;
+}
+
+.win98-title-bar {
+  background: #000080;
+  color: white;
+  padding: 2px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  height: 22px;
+}
+
+.win98-close {
+  background: #ece9d8;
+  border: 1px solid #808080;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+/* Ajuste dos botões da janela de erro com fonte menor e padding menor */
+.win98-buttons {
+  display: inline-flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.win98-buttons button {
+  background: #d4d0c8;
+  border: 2px solid #808080;
+  padding: 6px 12px;
+  margin: 0;
+  font-family: inherit;
+  font-size: 13px;
+  box-shadow: 2px 2px 0 white, -2px -2px 0 #404040;
+  cursor: pointer;
+  user-select: none;
+  color: black;
+}
+
+.win98-buttons button:active {
+  box-shadow: inset 2px 2px 0 white, inset -2px -2px 0 #404040;
+}
+
+.win98-body {
+  padding: 14px;
+}
+
+.win98-icon-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+/* === Animação piscar estilo Windows 98 === */
+@keyframes piscarErro {
+  0%, 100% { opacity: 1; }
+  16.6%, 49.9%, 83.2% { opacity: 0; }
+  33.3%, 66.6% { opacity: 1; }
+}
+
+.piscar {
+  animation: piscarErro 0.9s ease-in-out 1;
+}
