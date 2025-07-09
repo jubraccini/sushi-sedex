@@ -58,10 +58,10 @@ function telaErro() {
     </div>
   `;
 
-  somErro.play(); // só aqui, na exibição da tela erro
+  somErro.play(); // Só aqui, na exibição da tela erro
 
   document.getElementById("retry").onclick = () => {
-    telaInicial();
+    telaEnviando(); // Vai direto pro caminhão e spinner
   };
   document.getElementById("cancelError").onclick = () => {
     app.innerHTML = `
